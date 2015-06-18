@@ -203,7 +203,7 @@ ul,li {list-style:none;}
 .footer .certs .pic8 {background-position: -428px -18px; width: 40px;}
 .footer .certs .pic8:hover {background-position: -428px -58px; }
 /*元素初始状态*/
-.am-page .words { visibility:hidden; opacity:0; position:absolute; z-index: 11; background-position:0 0; background-repeat:no-repeat;}
+.am-page .words { position:absolute; z-index: 11; background-position:0 0; background-repeat:no-repeat;}
 .am-page .words img { width: 100%; height: 100%;}
 .view2 .words {-webkit-transition:1s .2s opacity;  -o-transition:1s .2s opacity;  -moz-transition:1s .2s opacity; -ms-transition:1s .2s opacity; transition:1s .2s opacity; top:30%; left:25%; width: 315px;}
 .view3 .words {-webkit-transition:1s 1.2s opacity;-o-transition:1s 1.2s opacity;-moz-transition:1s 1.2s opacity; -ms-transition:1s 1.2s opacity; transition:1s 1.2s opacity; top:29%;left: 50%; width:345px;}
@@ -211,8 +211,8 @@ ul,li {list-style:none;}
 .view5 .words {-webkit-transition:1s .5s opacity;-o-transition:1s .5s opacity;-moz-transition:1s .5s opacity; -ms-transition:1s .5s opacity; transition:1s .5s opacity; top:30%;right:18%; width: 300px;}
 .view3 .up { position:absolute; -webkit-transition: .8s .5s all;-o-transition: .8s .5s all;-moz-transition: .8s .5s all;-ms-transition: .8s .5s all; transition: .8s .5s all; }
 .view3 .down { position:absolute; -webkit-transition: .5s .2s all;-o-transition: .5s .2s all;-moz-transition: .5s .2s all;-ms-transition: .5s .2s all; transition: .5s .2s all; }
-.view3 .up { z-index: 2; top:-500px; left:-530px; width:480px; }
-.view3 .down { z-index: 1; top:102%; left:55%; width:1600px; }
+.view3 .up { z-index: 2; width:480px; }
+.view3 .down { z-index: 1; width:1600px; top: 400px;}
 .am-six .words {-webkit-transition:1s 1.5s opacity;-o-transition:1s 1.5s opacity;-moz-transition:1s 1.5s opacity; -ms-transition:1s 1.5s opacity; transition:1s 1.5s opacity; top:30%;left: 13%; width: 355px;}
 /* 进入动画*/
 .animateIn-one .words,.animateIn-two .words,.animateIn-three .words,.animateIn-four .words,.animateIn-six .words { visibility: visible; opacity:1;}

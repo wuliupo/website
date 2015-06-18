@@ -480,5 +480,24 @@
 	<a href="javascript:;"><i class="dotted"></i></a>
 	<a href="javascript:;"><i class="dotted"></i></a>
 </div>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+~function(){
+	var ps=$('.am-body').children();
+	var pa=$('.onepage-pagination a').click(function(e){
+		e.preventDefault();
+		var thi=$(this);
+		pa.removeClass('active');
+		thi.addClass('active');
+		ps.hide().eq(pa.index(thi)).slideDown().find('[data-lazyimg]').each(function(){
+			var thi=$(this);
+			var img=thi.attr('data-lazyimg');
+			if(!img||thi.css('background-image')!=='none')return;
+			img=img.substring(img.indexOf('|')+1);
+			thi.hasClass('am-bg')?thi.css('background-image', 'url('+img+')').removeAttr('data-lazyimg'):thi.replaceWith('<div class="'+thi.prop('className')+'"><img src="'+img+'" alt=""></div>');
+		});
+	})
+}();
+</script>
 </body>
 </html>
