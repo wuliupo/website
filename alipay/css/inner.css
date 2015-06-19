@@ -1,10 +1,10 @@
 @font-face {
 font-family: 'alipayhome';
-src: url('http://at.alicdn.com/t/font_1431504418_7238076.eot'); /* IE9*/
-src: url('http://at.alicdn.com/t/font_1431504418_7238076.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-url('http://at.alicdn.com/t/font_1431504418_7238076.woff') format('woff'), /* chrome¡¢firefox */
-url('http://at.alicdn.com/t/font_1431504418_7238076.ttf') format('truetype'), /* chrome¡¢firefox¡¢opera¡¢Safari, Android, iOS 4.2+*/
-url('http://at.alicdn.com/t/font_1431504418_7238076.svg#iconfont') format('svg'); /* iOS 4.1- */
+src: url('../res/font_1431504418_7238076.eot'); /* IE9*/
+src: url('../res/font_1431504418_7238076.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('../res/font_1431504418_7238076.woff') format('woff'), /* chrome¡¢firefox */
+url('../res/font_1431504418_7238076.ttf') format('truetype'), /* chrome¡¢firefox¡¢opera¡¢Safari, Android, iOS 4.2+*/
+url('../res/font_1431504418_7238076.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select, img {margin: 0;padding: 0;}
 body { font:12px/1.5 "Microsoft YaHei",tahoma,arial,Hiragino Sans GB,\5b8b\4f53; overflow: hidden;position: relative;}
@@ -65,7 +65,7 @@ ul,li {list-style:none;}
 .am-bannarAd-box {position:relative;z-index:1;display:none;}
 .mainNav {background-color:#ffffff;border-bottom: 1px #eeeeee solid;background-color:rgba(255,255,255,.9); }
 .mainMenu { margin-left:360px; }
-.alipay-logo {display:block;width:115px;position: relative;left:0;top:20px;float:left;height:40px;background-position:0 0;background-repeat:no-repeat;background-image: url(https://i.alipayobjects.com/i/localhost/png/201406/2m8C9z7xQ5_src.png);}
+.alipay-logo {display:block;width:115px;position: relative;left:0;top:20px;float:left;height:40px;background-position:0 0;background-repeat:no-repeat;background-image: url(../res/2m8C9z7xQ5_src.png);}
 .mainNav,.mainMenu,.channel .downlist .close {height:80px;}
 .channel {float:left; height:80px; line-height:80px;position:relative;}
 .channel .channel-a,.channel .downlist a {text-decoration:none; color:#333; font-size:16px; display:block;}
@@ -97,12 +97,12 @@ ul,li {list-style:none;}
 .am-service .downlist a { color: #333;display:block; }
 .am-service:hover .downlist { display: block;}
 /*µÚÒ»Ò³*/
-.video-loading { display: block; visibility: hidden; position: absolute; bottom: 130px; right: -40px; width: 50px; height: 50px; background: url(https://t.alipayobjects.com/images/T11pNfXnRnXXXXXXXX.gif) center center no-repeat;}
+.video-loading { display: block; visibility: hidden; position: absolute; bottom: 130px; right: -40px; width: 50px; height: 50px; background: url(../res/T11pNfXnRnXXXXXXXX.gif) center center no-repeat;}
 .play { display: block; visibility: hidden; height:36px;width:36px; line-height: 36px; font-size: 34px; text-decoration: none;color: #ffffff; bottom: 130px;right: -40px;position: absolute; z-index: 99;}
 .haslogin {bottom:130px !important;}
-.video-player {background-color: transparent;min-width: 100%; min-height: 100%; display: block; position: absolute; z-index: 1; visibility: hidden;}
+.video-player {background-color: transparent;min-width: 100%; min-height: 100%; display: block; position: absolute; z-index: 1;}
 .video-area { background-color: #666666;}
-.video-area .logo { margin-bottom:10px;/* width:520px;height:109px;*/ width: 420px; height: 88px; background-repeat: no-repeat; background-position: -10px 0; background-size:100% 100%;background-image: url(https://i.alipayobjects.com/i/ecmng/png/201501/4JdljnmTmX.png);}
+.video-area .logo { margin-bottom:10px;/* width:520px;height:109px;*/ width: 420px; height: 88px; background-repeat: no-repeat; background-position: -10px 0; background-size:100% 100%;background-image: url(../res/4JdljnmTmX.png);}
 .video-area .laymid { position:absolute;top:50%;left:50%;width:420px;height:200px;margin-left:-195px;margin-top: -40px; }
 .video-area .am-bg { overflow: hidden;}
 .video-area .click-me a {display:block; text-decoration:none; float: left; }
@@ -114,20 +114,17 @@ ul,li {list-style:none;}
 .video-mask,.poster {visibility: hidden; position: absolute; z-index: 9; top: 0; left: 0; width: 100%; height: 100%; opacity: 0;}
 .poster { -webkit-transition: 2s 0s opacity;-o-transition: 2s 0s opacity;-moz-transition: 2s 0s opacity;-ms-transition: 2s 0s opacity; transition: 2s 0s opacity; background-repeat:no-repeat; background-position: center center; background-size: cover; }
 .video-mask { visibility: hidden; z-index: 99; background: #000; opacity: 0.35; filter:alpha(opacity=40);}
-.stat-novideo .video-player,.stat-ready .video-mask { visibility: hidden; }
-.stat-playing .video-mask,.stat-end .video-mask,.stat-novideo .video-mask,.stat-pause .video-mask,.stat-pause .video-player,.stat-playing .video-player { visibility: visible;}
 .stat-playing .play { visibility: hidden; }
 .stat-pause .play { visibility: visible; }
 .stat-end .poster,.stat-novideo .poster { opacity: 1; visibility: visible;}
 .stat-end .play { visibility: visible; }
-.stat-end .video-player { visibility: hidden; }
 .stat-ready .video-loading { visibility: visible;}
 .popbox { display: none; height: 0;}
 .popbox .popmask { visibility: hidden; display: block; position: fixed; z-index: 997; top: 0; left: 0;background: rgba(0,0,0,0.6);}
 .popbox .loginbox .iframe,.popbox .loginbox iframe,.popbox .popmask { width: 100%; height: 100%;}
 .popbox .loginbox .iframe { position: relative;}
 .popbox .loginbox iframe { visibility: hidden; width:286px;overflow:hidden;}
-.popbox .loginbox .loading { width: 100%; height: 100%; position: absolute;top: 0; left: 0; background: url(https://t.alipayobjects.com/images/T1fONeXlBpXXXXXXXX.gif) #000000 no-repeat center center;}
+.popbox .loginbox .loading { width: 100%; height: 100%; position: absolute;top: 0; left: 0; background: url(../res/T1fONeXlBpXXXXXXXX.gif) #000000 no-repeat center center;}
 .popbox .loginbox { width: 286px; height: 380px; border-radius: 5px; overflow: hidden; visibility: hidden; position: absolute; z-index: 1001; top: 50%; left: 50%; margin-left: -143px; margin-top: -120px;}
 .popbox .popbox-close { position: absolute; z-index: 9; top: 5px; left: 10px; font-size: 16px; color: #ccc; text-decoration: none;}
 .popbox .popbox-close:hover {color:#f1f1f1;}
@@ -185,7 +182,7 @@ ul,li {list-style:none;}
 .footer .links a {float:left;text-decoration:none;margin-bottom:5px;border-left:1px #999999 solid; margin-right:5px; padding-left:5px;}
 .footer .links a:first-child {border-left:0;padding-left: 0 !important;}
 .footer .certs { margin-top:5px; height: 38px; }
-.footer .certs a { display: block; float: left; height: 38px; background: url(https://i.alipayobjects.com/i/ecmng/png/201501/4JdkuzOiwP.png) no-repeat 0 0; margin-right: 20px;}
+.footer .certs a { display: block; float: left; height: 38px; background: url(../res/4JdkuzOiwP.png) no-repeat 0 0; margin-right: 20px;}
 .footer .certs .pic1 {background-position: -4px -20px; width: 32px; }
 .footer .certs .pic1:hover {background-position: -2px -64px; }
 .footer .certs .pic2 {background-position: -64px -15px; width: 70px; }
@@ -312,13 +309,13 @@ transform: translate3d(0,0,0);*/
 }
 /* when device-pixel-ratio == 2 */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-.video-area .logo {background-image: url(https://i.alipayobjects.com/i/ecmng/png/201501/4JdkvPYoOr.png);}
-.alipay-logo {background-image:url(https://i.alipayobjects.com/i/localhost/png/201406/2m8CambYir_src.png);}
+.video-area .logo {background-image: url(../res/4JdkvPYoOr.png);}
+.alipay-logo {background-image:url(../res/2m8CambYir_src.png);}
 .am-page .words,.alipay-logo,.youcan .icon,.am-three .up,.am-three .down {background-size:100% 100%;}
 .am-two .words {}
 .am-three .words {}
 .am-four .words {right: 15%;}
-.footer .certs a { background-image: url(https://i.alipayobjects.com/i/ecmng/png/201501/4JdloFhW69.png); background-size: 500px 100px;}
+.footer .certs a { background-image: url(../res/4JdloFhW69.png); background-size: 500px 100px;}
 }
 .am-page,.am-bg,.am-page .main-content,.video-mask,.ftbar {-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);}
 .fuck-ie { display: none;}
