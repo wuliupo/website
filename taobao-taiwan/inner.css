@@ -1,0 +1,182 @@
+.ww-light{overflow:hidden;}.ww-block{display:block;margin-top:3px;}.ww-inline{display:inline-block;vertical-align:text-bottom;}.ww-light a{background-image: url("http://img.alicdn.com/tps/i1/T15AD7FFFaXXbJnvQ_-130-60.gif");background-image: -webkit-image-set(url("http://img.alicdn.com/tps/i1/T15AD7FFFaXXbJnvQ_-130-60.gif") 1x,url("http://img.alicdn.com/tps/i4/T1Rsz7FPJaXXbZhKn7-520-240.gif") 4x);background-image: -moz-image-set(url("http://img.alicdn.com/tps/i1/T15AD7FFFaXXbJnvQ_-130-60.gif") 1x,url("http://img.alicdn.com/tps/i4/T1Rsz7FPJaXXbZhKn7-520-240.gif") 4x);background-image: -o-image-set(url("http://img.alicdn.com/tps/i1/T15AD7FFFaXXbJnvQ_-130-60.gif") 1x,url("http://img.alicdn.com/tps/i4/T1Rsz7FPJaXXbZhKn7-520-240.gif") 4x);background-image: -ms-image-set(url("http://img.alicdn.com/tps/i1/T15AD7FFFaXXbJnvQ_-130-60.gif") 1x,url("http://img.alicdn.com/tps/i4/T1Rsz7FPJaXXbZhKn7-520-240.gif") 4x);text-decoration:none!important;width:20px;height:20px;zoom:1;}.ww-large a{width:67px;}a.ww-offline{background-position:0 -20px;}a.ww-mobile{background-position:0 -40px;}.ww-small .ww-online{background-position:-80px 0;}.ww-small .ww-offline{background-position:-80px -20px;}.ww-small .ww-mobile{background-position:-80px -40px;}.ww-static .ww-online{background-position:-110px 0;}.ww-static .ww-offline{background-position:-110px -20px;}.ww-static .ww-mobile{background-position:-110px -40px;}.ww-light a span{display:none;}
+a {
+color: #3e3e3e;
+text-decoration: none;
+}
+.w1200 .site-nav .site-nav-bd {
+width:1190px;
+min-width:990px;
+}
+.site-nav .site-nav-bd .site-nav-bd-l .home{
+display:inline-block !important;
+}
+.sea-header {
+width: 100%;
+padding-top: 26px;
+background: #fff;
+border-bottom: none;
+}
+.sea-header-bd {
+height: 91px;
+position: relative;
+}
+.sea-header .sea-header-logo {
+float: left;
+margin-right: 80px;
+}
+.sea-header .sea-header-logo-lnk {
+display: block;
+width: 170px;
+height: 65px;
+background: url(http://img.alicdn.com/tps/i4/TB1MopgGXXXXXcqXXXXRQeAMpXX-260-760.png) no-repeat 0 0;
+overflow: hidden;
+}
+.sea-header .sea-header-search {
+float: left;
+margin-top: 0;
+}
+.sea-header .search-hots {
+padding-top: 7px;
+height: 14px;
+overflow: hidden;
+}
+.sea-header .search-hots label {
+float: left;
+color: #6c6c6c;
+line-height: 1.1;
+}
+.sea-header .search-hots a {
+float: left;
+line-height: 1.1;
+padding: 0 10px;
+color: #737373;
+background: url(http://img.alicdn.com/tps/i4/TB1MopgGXXXXXcqXXXXRQeAMpXX-260-760.png) no-repeat -258px -14px;
+}
+.sea-header .search-hots a:hover {
+color: #f40;
+}
+.sea-header .search-hots a.first {
+background: none;
+}
+.sea-header .sea-header-ad {
+position: absolute;
+right: 0;
+top: -26px;
+width: 230px;
+height: 117px;
+overflow: hidden;
+}
+.sea-header .sea-header-ad a{
+display:block;
+width:230px;
+height:117px;
+}
+.sea-header .sea-header-search, .large-search .search-panel {
+width: 490px;
+}
+@media (min-width: 1190px) {
+.sea-header .sea-header-logo {
+	margin-right: 120px;
+}
+.sea-header .sea-header-search, .large-search .search-panel {
+  width: 650px;
+}
+}
+@media (min-width: 1490px) {
+.sea-header .sea-header-search, .large-search .search-panel {
+  width: 900px;
+}
+}
+.w1190 .sea-header .sea-header-logo, .w1490 .sea-header .sea-header-logo {
+margin-right: 120px;
+}
+.w1190 .sea-header .sea-header-search, .w1190 .large-search .search-panel {
+width: 650px;
+}
+.w1490 .sea-header .sea-header-search, .w1490 .large-search .search-panel {
+width: 900px;
+}
+
+.w1200 .footer_2014{
+width: 1190px;
+margin: 0 auto;
+}
+.w990 .footer_2014{
+width: 990px;
+}
+#J_Search{left:323px;top:18px;background:#fff;position:absolute}
+.search{padding:0}
+.search-panel{width:667px;position:relative;zoom:1}
+.search-item-panel button.btn-search,.search-item-panel button.btn-search-hover,.search-item-panel button.btn-search:hover,.search-list-panel-focused .search-panel-fields input,.search-panel button.btn-list,.search-panel button.btn-search,.search-panel button.btn-search-hover,.search-panel button.btn-search:hover,.search-panel button.btn-searchall,.search-panel button.btn-searchall-hover,.search-panel button.btn-searchall:hover,.search-panel button.btn-searchshop,.search-panel button.btn-searchshop-hover,.search-panel button.btn-searchshop:hover,.search-panel-focused .search-panel-fields input,.search-srp-panel .search-panel-focused .search-panel-fields input,.search-srp-panel button.btn-search,.search-srp-panel button.btn-search-hover,.search-srp-panel button.btn-search:hover{background-image:url(http://img.alicdn.com/tps/i1/T1HM4.FalcXXbMnNTw-919-175.png);background-repeat:no-repeat}
+.search-panel-fields{height:33px;position:relative;zoom:1;background:#e6e6e6;overflow:hidden}
+.search-panel-fields label{position:absolute;left:15px;top:8px;z-index:1;color:#999;cursor:text}
+.search-panel-fields input{font-size:14px;position:absolute;left:3px;top:3px;height:18px;line-height:18px;padding:4px 0;background:#fff;vertical-align:middle;border:0 none;border-top:1px solid #f5f5f5}
+.search-panel .search-button{position:relative;z-index:1;float:right;background:#fff}
+.search-panel button{cursor:pointer;border:0;font-size:18px;text-indent:-999em;float:left;width:73px;height:33px}
+.search-status-focus .search-panel-fields s,.search-status-focus label{display:none}
+.search-combobox{margin-left:3px;margin-right:0}
+.search-panel-fields .search-combobox input{left:0}
+.search-panel-fields input{left:-3px;width:100%;outline:0;padding-right:3px;text-indent:5px;margin-left:6px}
+.search-combobox-input-wrap{position:relative;overflow:hidden}
+.search-panel-fields .search-combobox-input-wrap input{margin-left:0}
+.search-panel-two-buttons .search-panel-fields{margin-right:0}
+.search-panel button.btn-searchshop{background-position:-100px -76px;margin-left:3px}
+.search-panel button.btn-searchshop:hover{background-position:-100px -120px}
+.search-panel-hover .search-panel-fields{background:#f50}
+.search-list-panel-focused .search-panel-fields input,.search-panel-focused .search-panel-fields input{border-top:0;padding-top:5px;background-position:0 -40px;background-color:#fff}
+.search-panel button.btn-searchall{background-position:-260px -76px;margin-left:3px}
+.search-panel button.btn-searchall-hover,.search-panel button.btn-searchall:hover{background-position:-260px -120px}
+.search-panel button.btn-list{background-position:-420px -76px}
+.search-panel button.btn-search{background-position:-180px -76px}
+.search-panel button.btn-search-hover,.search-panel button.btn-search:hover{background-position:-180px -120px}
+.search-common-panel,.search-panel-focused .search-panel-fields{background:#f50}
+.search-sns-panel-field input{top:0}
+.search-sns-panel-field .search-combobox{margin-left:0}
+.search-sns-panel-field{width:322px;float:right;background:#fff;height:27px;margin-top:4px;margin-right:4px}
+.search-sns-panel-field .search-panel-fields{margin-right:0}
+.search-sns-panel-field label{top:5px}
+.search-sns-panel-field button.btn-search{text-indent:0;font-size:12px;color:#666;background:#f5f5f5;height:27px;width:72px;border-left:1px solid #d9d9d9}
+.search-sns-panel-field .search-panel-fields{height:27px}
+.search-sns-panel-field .search-combobox{margin-left:0}
+.search-sns-panel-field .search-combobox-input-wrap{height:27px}
+.search-sns-panel-field .search-combobox-input{top:0;background:#fff}
+.search-sns-panel-field button.btn-search:hover{background:#f5f5f5;color:#333}
+.search-srp-panel-fields{height:37px;margin-right:0}
+.search-srp-panel-fields label{top:10px}
+.search-srp-panel-fields input{height:22px;line-height:22px}
+.search-srp-panel-fields .search-combobox-input-wrap{height:34px}
+.search-srp-panel button.btn-search{width:93px;height:37px;background-position:0 -76px}
+.search-srp-panel button.btn-search-hover,.search-srp-panel button.btn-search:hover{background-position:0 -120px}
+.search-srp-panel .search-panel-focused .search-panel-fields input{background-position:0 0}
+.search-item-panel button.btn-search{background-position:-340px -76px}
+.search-item-panel button.btn-search:hover{background-position:-340px -120px}
+.search-faxian-panel .search-combobox{margin-left:3px}
+.search-panel-focused .search-hp-fields input,div.search-hp-panel button.btn-search,div.search-hp-panel button.btn-search-hover,div.search-hp-panel button.btn-search:hover{background-image:url(http://img.alicdn.com/tps/i4/T1uqayFoleXXacpxYw-919-209.png)}
+.search-panel-focused .search-hp-fields input{background-position:0 -170px}
+.search-hp-panel button.btn-search{background-position:-553px -76px;height:45px;width:93px}
+div.search-hp-panel button.btn-search-hover,div.search-hp-panel button.btn-search:hover{background-position:-553px -76px}
+.search-panel .search-common-panel i{background-position:-380px -20px;background-image:url(http://img.alicdn.com/tps/i4/T1OdGtFaxfXXXa78nI-400-200.png);background-repeat:no-repeat}
+.search-hp-fields{height:45px}
+.search-hp-fields input,.search-hp-fields label{margin-left:76px}
+.search-hp-fields .search-combobox{margin-left:79px}
+.search-hp-fields .search-combobox input{margin-left:0;text-indent:10px}
+.search-hp-fields label{top:13px;left:25px}
+.search-hp-fields .search-combobox-input-wrap{height:42px}
+.search-hp-fields input{padding:10px 0}
+.search-panel-focused .search-hp-fields input{padding:11px 0 10px}
+.search-triggers .ks-switchable-nav{width:74px;position:absolute;z-index:9999;left:3px;top:3px;height:39px;border-right:1px solid #e5e5e5;border-left:1px solid #f5f5f5}
+.triggers-hover .ks-switchable-nav{border-bottom:1px solid #e5e5e5;border-left:1px solid #e5e5e5;overflow:visible;height:auto}
+.search-triggers li{display:none;width:100%}
+.triggers-hover li{display:block}
+.search-triggers li a{height:100%;width:100%;padding:0;text-align:left;text-indent:15px;line-height:39px;color:#6b6b6b;background:#fff;font-weight:400;font-size:14px}
+.search-triggers{position:relative}
+.search-triggers li.selected{display:block}
+.search-triggers li.selected a{padding:0;background:#f5f5f5;border-radius:0;border:0 none;color:#6b6b6b;font-weight:400;font-size:14px}
+.search-triggers li a:hover,.search-triggers li.selected a:hover{color:#6b6b6b!important}
+.search-triggers s{line-height:0;border-width:4px;border-color:#666 transparent transparent;border-style:solid;height:0;position:absolute;top:19px;font-size:0;left:60px;z-index:10}
+.search-triggers s s{border-width:3px;border-color:#f6f6f6 transparent transparent;top:-4px;left:-3px;position:absolute}
+.search-panel .search-common-panel i{z-index:2;position:absolute;top:17px;left:86px;width:12px;height:12px;display:none}
+.search-hots{clear:both;font:12px/1.5 arial;padding:10px 5px 5px;color:#3e3e3e;+ padding-top:5 px;position: absolute;top: 30px;left: 0px;}
+.search-hots a{color:#3e3e3e;margin-right:6px}
+.search-hots .more{margin-left:6px}
+.footer .footer-ft{display:block;}
