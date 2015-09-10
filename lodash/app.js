@@ -33,6 +33,7 @@ filter[addEvent]('keyup', function(){
 				if(data.toLowerCase() === val) {
 					location.hash = '#' + data;
 					match = true;
+					filter.focus();
 				}
 			}
 		});
