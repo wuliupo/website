@@ -3130,17 +3130,17 @@ function(e, n, t) { (function(n) {
                 s = $(".footer-social").attr("data-locale"),
                 l = void 0 !== s ? s.slice( - 2) : "notier1",
                 c = void 0 !== s ? s.substring(0, 2) : "",
-                d = "//s7.addthis.com/js/300/addthis_widget.js#async=1";
+                d = "https://s7.addthis.com/js/300/addthis_widget.js#async=1";
                 void 0 !== r[l] && c === r[l].lang ? (o = r[l].id, a = r[l].lang) : (o = r.notier1.id, a = r.notier1.lang),
                 window.addthis_config = {
                     pubid: o,
                     services_exclude: "mailto,email",
                     ui_language: a
                 },
-                e(),
+                e()/*,
                 $.getScript(d).done(function() {
                     i()
-                })
+                })*/
             }
             return {
                 initialize: e
@@ -3408,9 +3408,9 @@ function(e, n, t) {
 function(e, n, t) {
     "use strict";
     var i = t(1),
-    o = "/services/hpe/eloqua.reset.do",
-    a = "/services/hpe/eloqua.submitForm.do",
-    r = "/services/hpe/eloqua.contactLookup.do";
+    o = "https://www.hpe.com/services/hpe/eloqua.reset.do",
+    a = "https://www.hpe.com/services/hpe/eloqua.submitForm.do",
+    r = "https://services/hpe/eloqua.contactLookup.do";
     e.exports = function() {
         var e = function(e) {
             e && (o = o + "?origin=" + String(e)),
