@@ -38,105 +38,6 @@
 	<link rel="stylesheet" href="https://www.hpe.com/etc/clientlibs/hpeweb/css/hpe-global-bless.min.css" />
 	<script src="https://www.hpe.com/etc/clientlibs/hpeweb/js/hpe-polyfill-bundle.js"></script>
 <![endif]-->
-<!-- demandbase initialization -->
-<script>
-	(function(d,b,a,s,e){ var t = b.createElement(a),
-		fs = b.getElementsByTagName(a)[0]; t.async=1; t.id=e;
-		t.src=('https:'==document.location.protocol ? 'https://' : 'http://') + s;
-		fs.parentNode.insertBefore(t, fs); })
-	(window,document,'script','scripts.demandbase.com/Wkilu3D9.min.js','demandbase_js_lib');
-</script>
-<!-- /demandbase initialization -->
-<!-- bluekai -->
-<script type="text/javascript" src="https://tags.bluekai.com/site/25807?ret=js"></script>
-<script type="text/javascript">
-	target_params = "";
-	var bkCatIdSt = "";
-	var bkCampStr = "";
-	if(typeof(bk_results) != "undefined" && typeof(bk_results.campaigns) != "undefined") {
-		for(var i=0;i< bk_results.campaigns.length;i++)
-		{
-			bkCampStr += bk_results.campaigns[i].campaign + ",";
-			for(var j=0;j<bk_results.campaigns[i].categories.length;j++)
-			{
-				if(typeof(bk_results.campaigns[i].categories[j].categoryID) != "undefined")
-				{
-					var s = bk_results.campaigns[i].categories[j].categoryID + "";
-					bkCatIdSt += bk_results.campaigns[i].categories[j].categoryID + ",";
-				}
-			}
-		}
-	}
-	bluekai_campaign = encodeURIComponent(bkCampStr);
-	bluekai_category = encodeURIComponent(bkCatIdSt);
-	target_params = "profile.campaign="+bluekai_campaign+"&"+"profile.category="+bluekai_category;
-	function targetPageParams() {
-		return target_params;
-	}
-</script>
-<!-- /bluekai -->
-<!-- demandbase -->
-<script type="text/javascript">
-	function set_mbox_variables(data) {
-		if (!data) return;
-		try {
-			var profileAttrStr = '',
-				delim = '&',
-				builder;
-			var demandbaseAttrStr = [];
-			for (var d in data) {
-				if (typeof data[d] == 'object' && data[d] !== null) {
-					for (var cd in data[d]) {
-						data[d + '_' + cd] = data[d][cd]
-					};
-					delete data[d];
-				}
-			}
-			for (var key in data) {
-				if (data.hasOwnProperty(key)) {
-					if (demandbaseAttrStr.indexOf(key) != -1) {
-						var attr = 'profile.' + key + '=' + data[key] + delim;
-						profileAttrStr += attr;
-					}
-				}
-			}
-			target_params += "&" + profileAttrStr;
-			profileAttrStr = profileAttrStr.split(delim);
-			if (typeof mboxFactoryDefault !== 'undefined') {
-				builder = mboxFactoryDefault.getUrlBuilder();
-				builder.addParameters(profileAttrStr)
-			}
-		} catch (e) {
-			console.log(e);
-		}
-	}
-</script>
-<script src="https://api.demandbase.com/api/v2/ip.json?key=e5a765547ff6e54710164b952e1477bf&callback=set_mbox_variables"></script>
-<!-- /demandbase -->
-<!-- target -->
-<script src="https://www.hpe.com/etc/clientlibs/hpecomponent/js/mbox.js"></script>
-<!-- /target -->
-<!-- tealium -->
-<!-- telium-data [Must be defined BEFORE Tealium Include] -->
-<script type="text/javascript">
-  var digitalData = window.digitalData || { page: {pageInfo:{},category:{}}, product:[], user:[]};
-  digitalData.page.pageID ="home1160446308";
-  digitalData.page.pageInfo.business_unit = "corporate";
-  digitalData.page.category.pageType = "gateway";
-  digitalData.page.pageInfo.breadCrumbs =["content", "hpe", "country", "us", "en", "home"];
-  digitalData.page.parentPage ="en";
-  digitalData.page.pageInfo.technology_stack = "AEM";
-</script>
-<!-- /tealium-data -->
-<!-- tealium-code [DEV ONLY, DO NOT USE IN PRODUCTION] -->
-<script type="text/javascript">
-  (function() {
-		var tf = "https://tags.tiqcdn.com/utag/hp/bootstrap/prod/utag.sync.js";
-		document.write('\x3Cscript type="text/javascript" src="' + tf + '">\x3C/script>');
-  })();
-</script>
-<!-- /tealium-code -->
-<!-- /tealium -->
 </head>
 <!--[if lte IE 8]><body class="ie8 "><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><body><!--<![endif]-->
@@ -253,8 +154,8 @@
               <li class="location-item"><a href="#" title="&Ouml;sterreich" data-cc="at" aria-labelledby="at-language-selection-desktop" aria-expanded="false">
                 &Ouml;sterreich</a>
               </li>
-              <li class="location-item"><a href="#" title="Belgique&#x20;&#x2f;&#x20;Belgi&euml;" data-cc="be" aria-labelledby="be-language-selection-desktop" aria-expanded="false">
-                Belgique &#x2f; Belgi&euml;</a>
+              <li class="location-item"><a href="#" title="Belgique&#x20;/&#x20;Belgi&euml;" data-cc="be" aria-labelledby="be-language-selection-desktop" aria-expanded="false">
+                Belgique / Belgi&euml;</a>
               </li>
               <li class="location-item"><a href="#" title="&#x10c;esk&aacute;&#x20;republika" data-cc="cz" aria-labelledby="cz-language-selection-desktop" aria-expanded="false">
                 &#x10c;esk&aacute; republika</a>
@@ -289,8 +190,8 @@
               <li class="location-item"><a href="#" title="Sweden" data-cc="se" aria-labelledby="se-language-selection-desktop" aria-expanded="false">
                 Sweden</a>
               </li>
-              <li class="location-item"><a href="#" title="Suisse&#x20;&#x2f;&#x20;Schweiz" data-cc="ch" aria-labelledby="ch-language-selection-desktop" aria-expanded="false">
-                Suisse &#x2f; Schweiz</a>
+              <li class="location-item"><a href="#" title="Suisse&#x20;/&#x20;Schweiz" data-cc="ch" aria-labelledby="ch-language-selection-desktop" aria-expanded="false">
+                Suisse / Schweiz</a>
               </li>
               <li class="location-item"><a href="#" title="Turkey" data-cc="tr" aria-labelledby="tr-language-selection-desktop" aria-expanded="false">
                 Turkey</a>
@@ -1159,8 +1060,8 @@
                         </a>
                     </li>
                     <li class="location-item">
-                        <a href="#" title="Belgique&#x20;&#x2f;&#x20;Belgi&euml;" data-cc="be" aria-labelledby="be-language-selection-mobile" aria-expanded="false">
-                                Belgique &#x2f; Belgi&euml;
+                        <a href="#" title="Belgique&#x20;/&#x20;Belgi&euml;" data-cc="be" aria-labelledby="be-language-selection-mobile" aria-expanded="false">
+                                Belgique / Belgi&euml;
                         </a>
                     </li>
                     <li class="location-item">
@@ -1219,8 +1120,8 @@
                         </a>
                     </li>
                     <li class="location-item">
-                        <a href="#" title="Suisse&#x20;&#x2f;&#x20;Schweiz" data-cc="ch" aria-labelledby="ch-language-selection-mobile" aria-expanded="false">
-                                Suisse &#x2f; Schweiz
+                        <a href="#" title="Suisse&#x20;/&#x20;Schweiz" data-cc="ch" aria-labelledby="ch-language-selection-mobile" aria-expanded="false">
+                                Suisse / Schweiz
                         </a>
                     </li>
                     <li class="location-item">
@@ -1488,8 +1389,8 @@
                                 <a id="connect-icon" href="#" aria-label="Contact&#x20;Us" class="connect">
                                     <span class="icon-nav-contact">Contact Us</span>
                                 </a>
-                                <!-- START: contact form component &#x2f;content&#x2f;hpe&#x2f;country&#x2f;us&#x2f;en&#x2f;contact-us-->
-                                <div class="contact-form-component dropdown-menu" data-attribute-url="&#x2f;content&#x2f;hpe&#x2f;country&#x2f;us&#x2f;en&#x2f;contact-us">
+                                <!-- START: contact form component /content/hpe/country/us/en/contact-us-->
+                                <div class="contact-form-component dropdown-menu" data-attribute-url="https://www.hpe.com/content/hpe/country/us/en/contact-us">
                                     <div class="initial-step row">
                                         <div class="col-xs-12 text-center">
                                             <div class="contact-header">
@@ -1655,7 +1556,7 @@
                                                                                 <div class="col-xs-12 text-legal">
                                                                                     <button aria-describedby="contact-us-legal-note" aria-label="Click here to submit your information and contact us" type="submit" class="btn btn-primary btn-large btn-send-form">CONTACT US</button>
                                                                                     <p id="contact-us-legal-note" class="text-center">
-                                                                                        <a href="https://www.hpe.com/us/en/legal/privacy.html" target="_blank">&#x2a;Learn how automatic data collection tools personalize your experience.</a> &#x2a;&#x2a;Beyond this inquiry, HPE may contact me with personalized offers, support updates, and event news. &#x2a;&#x2a;&#x2a; By selecting Yes, you consent and acknowledge that additional autodialed and&#x2f;or pre-recorded telemarketing calls by or on behalf of HPE may be  made to the cell phone number you provide. Data rates may apply. Consent is not a condition of purchase.
+                                                                                        <a href="https://www.hpe.com/us/en/legal/privacy.html" target="_blank">&#x2a;Learn how automatic data collection tools personalize your experience.</a> &#x2a;&#x2a;Beyond this inquiry, HPE may contact me with personalized offers, support updates, and event news. &#x2a;&#x2a;&#x2a; By selecting Yes, you consent and acknowledge that additional autodialed and/or pre-recorded telemarketing calls by or on behalf of HPE may be  made to the cell phone number you provide. Data rates may apply. Consent is not a condition of purchase.
                                                                                         <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html" target="_blank">Terms and Conditions</a>
                                                                                     </p>
                                                                                 </div>
@@ -1923,7 +1824,7 @@
                                                             <div class="col-xs-12 text-legal">
                                                                 <button type="submit" aria-describedby="desktop-contact-us-blurb" class="btn btn-primary btn-large btn-send-form">CONTACT US</button>
                                                                 <p id="desktop-contact-us-blurb" class="text-center">
-                                                                    <a href="https://www.hpe.com/us/en/legal/privacy.html" target="_blank">&#x2a;Learn how automatic data collection tools personalize your experience.</a> &#x2a;&#x2a;Beyond this inquiry, HPE may contact me with personalized offers, support updates, and event news. &#x2a;&#x2a;&#x2a; By selecting Yes, you consent and acknowledge that additional autodialed and&#x2f;or pre-recorded telemarketing calls by or on behalf of HPE may be  made to the cell phone number you provide. Data rates may apply. Consent is not a condition of purchase.
+                                                                    <a href="https://www.hpe.com/us/en/legal/privacy.html" target="_blank">&#x2a;Learn how automatic data collection tools personalize your experience.</a> &#x2a;&#x2a;Beyond this inquiry, HPE may contact me with personalized offers, support updates, and event news. &#x2a;&#x2a;&#x2a; By selecting Yes, you consent and acknowledge that additional autodialed and/or pre-recorded telemarketing calls by or on behalf of HPE may be  made to the cell phone number you provide. Data rates may apply. Consent is not a condition of purchase.
                                                                     <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html" target="_blank">Terms and Conditions</a>
                                                                 </p>
                                                             </div>
@@ -2010,7 +1911,7 @@
                                     <span class="icon-nav-glass-search">Search</span>
                                 </a>
                                 <!-- BEGIN: search component -->
-                                <div class="search_component dropdown-menu" aria-labelledby="search-icon" id="search-component" data-autosuggest-autosuggestURL="https&#x3a;&#x2f;&#x2f;iapproltautocm.austin.hpe.com&#x2f;hp-iap-autocomplete&#x2f;search&#x3f;lang&#x3d;en&amp;category&#x3d;SS&amp;country&#x3d;us&amp;companyCode&#x3d;HPE&amp;q&#x3d;" data-autosuggest-redirectionURL="http&#x3a;&#x2f;&#x2f;www8.hp.com&#x2f;us&#x2f;en&#x2f;hpe&#x2f;search-results.html&#x3f;ajaxpage&#x3d;1&#x23;&#x2f;page&#x3d;1&amp;&#x2f;cc&#x3d;us&amp;&#x2f;lang&#x3d;en&amp;&#x2f;qt&#x3d;">
+                                <div class="search_component dropdown-menu" aria-labelledby="search-icon" id="search-component" data-autosuggest-autosuggestURL="https&#x3a;//iapproltautocm.austin.hpe.com/hp-iap-autocomplete/search&#x3f;lang&#x3d;en&amp;category&#x3d;SS&amp;country&#x3d;us&amp;companyCode&#x3d;HPE&amp;q&#x3d;" data-autosuggest-redirectionURL="http&#x3a;//www8.hp.com/us/en/hpe/search-results.html&#x3f;ajaxpage&#x3d;1&#x23;/page&#x3d;1&amp;/cc&#x3d;us&amp;/lang&#x3d;en&amp;/qt&#x3d;">
                                     <div class="search-field">
                                         <div class="input-group">
                                             <label for="search_text" class="hidden">Type to search</label>
@@ -2073,23 +1974,23 @@
             <div class="bg-img img-container img-container-9-6-to-16-8 img-wrapper">
 	<picture class=" mobileimg-container-9-6">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg"
 	        alt="next idea economy video"
 	        title="next idea economy video"
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg"
 	        alt="next idea economy video"
 	        title="next idea economy video"
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_1536&#x40;2x-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_1536&#x40;2x-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="next idea economy video" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" title="next&#x20;idea&#x20;economy&#x20;video" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_1536&#x40;2x-xs.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_1536&#x40;2x-xs.jpg/image-2x-xs 2x" alt="next idea economy video" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" title="next&#x20;idea&#x20;economy&#x20;video" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
             </div>
@@ -2099,23 +2000,23 @@
                 <div class="bg-img-fallback img-wrapper">
 	<picture class=" mobileimg-container-9-6">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg"
 	        alt="next idea economy video"
 	        title="next idea economy video"
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_3200&#x40;2x.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_3200&#x40;2x.jpg"
 	        alt="next idea economy video"
 	        title="next idea economy video"
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_1536&#x40;2x-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;featuredMarquee&#x2f;Home_Train_1536&#x40;2x-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="next idea economy video" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" title="next&#x20;idea&#x20;economy&#x20;video" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_1536&#x40;2x-xs.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/featuredMarquee/Home_Train_1536&#x40;2x-xs.jpg/image-2x-xs 2x" alt="next idea economy video" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" title="next&#x20;idea&#x20;economy&#x20;video" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
                 </div>
@@ -2211,23 +2112,23 @@
 	    <!-- Image for desktop -->
 	<picture class="img-container-9-6 ">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg"
 	        alt=""
 	        title=""
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg"
 	        alt=""
 	        title=""
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-TransformHybridInfrastracture-2x-md-xs.jpg/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
 	</div>
@@ -2273,23 +2174,23 @@
 	    <!-- Image for desktop -->
 	<picture class="img-container-9-6 ">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg"
 	        alt=""
 	        title=""
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg"
 	        alt=""
 	        title=""
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-ProtectEnterpriseHPE-EducationandTraining-2x-md-xs.jpg/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
 	</div>
@@ -2331,23 +2232,23 @@
 	    <!-- Image for desktop -->
 	<picture class="img-container-9-6 ">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg"
 	        alt=""
 	        title=""
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg"
 	        alt=""
 	        title=""
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EmpowertheOrganizationHPE-EducationandTraining-2x-md-xs.jpg/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
 	</div>
@@ -2390,23 +2291,23 @@
 	    <!-- Image for desktop -->
 	<picture class="img-container-9-6 ">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg"
 	        alt=""
 	        title=""
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg"
 	        alt=""
 	        title=""
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;tabbedCarousel&#x2f;HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/tabbedCarousel/HPE-Marquee-EnableProductivityHPE-EducationandTraining-2x-md-xs.jpg/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
 	</div>
@@ -2478,23 +2379,23 @@
 				<div class="img-container img-container-1-1">
 	<picture class="img-container-1-1 ">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Discover-London-2015-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Discover-London-2015-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Discover-London-2015-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Discover-London-2015-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Discover-London-2015-2x-md.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Discover-London-2015-2x-md.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Discover-London-2015-2x-md.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Discover-London-2015-2x-md.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Discover-London-2015-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Discover-London-2015-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Discover-London-2015-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Discover-London-2015-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Discover-London-2015-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Discover-London-2015-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Discover-London-2015-2x-md.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Discover-London-2015-2x-md.jpg/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
 		        </div>
@@ -2516,23 +2417,23 @@
 					<div class="img-container img-container-9-6">
 	<picture class="img-container-9-6 ">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Matter-Next-Enterprise-Issue-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Matter-Next-Enterprise-Issue-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Matter-Next-Enterprise-Issue-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Matter-Next-Enterprise-Issue-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Matter-Next-Enterprise-Issue-2x-md.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Matter-Next-Enterprise-Issue-2x-md.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Matter-Next-Enterprise-Issue-2x-md.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Matter-Next-Enterprise-Issue-2x-md.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Matter-Next-Enterprise-Issue-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Matter-Next-Enterprise-Issue-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Matter-Next-Enterprise-Issue-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Matter-Next-Enterprise-Issue-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Matter-Next-Enterprise-Issue-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Matter-Next-Enterprise-Issue-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Matter-Next-Enterprise-Issue-2x-md.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Matter-Next-Enterprise-Issue-2x-md.jpg/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
 			        </div>
@@ -2556,23 +2457,23 @@
 					<div class="img-container img-container-9-6">
 	<picture class="img-container-9-6 ">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Aruba-Networks-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Aruba-Networks-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Aruba-Networks-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Aruba-Networks-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Aruba-Networks-2x-md.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Aruba-Networks-2x-md.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Aruba-Networks-2x-md.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Aruba-Networks-2x-md.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Aruba-Networks-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Aruba-Networks-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Aruba-Networks-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Aruba-Networks-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Aruba-Networks-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;HPE-Aruba-Networks-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Aruba-Networks-2x-md.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/HPE-Aruba-Networks-2x-md.jpg/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
 			        </div>
@@ -2594,23 +2495,23 @@
 					<div class="img-container img-container-9-6">
 	<picture class="img-container-9-6 ">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Hewlett-Packard-Labs-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Hewlett-Packard-Labs-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Hewlett-Packard-Labs-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Hewlett-Packard-Labs-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Hewlett-Packard-Labs-2x-md.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Hewlett-Packard-Labs-2x-md.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Hewlett-Packard-Labs-2x-md.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Hewlett-Packard-Labs-2x-md.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Hewlett-Packard-Labs-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Hewlett-Packard-Labs-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Hewlett-Packard-Labs-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Hewlett-Packard-Labs-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Hewlett-Packard-Labs-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;Hewlett-Packard-Labs-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Hewlett-Packard-Labs-2x-md.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/Hewlett-Packard-Labs-2x-md.jpg/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
 			        </div>
@@ -2632,23 +2533,23 @@
 					<div class="img-container img-container-9-6">
 	<picture class="img-container-9-6 ">
 	    <!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;New-HPE-About-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;New-HPE-About-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-md 2x" media="(min-width: 992px)"/>
-		<source data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;New-HPE-About-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-sm 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;New-HPE-About-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-sm 2x" media="(min-width: 768px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/New-HPE-About-2x-md.jpg 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/New-HPE-About-2x-md.jpg/image-2x-md 2x" media="(min-width: 992px)"/>
+		<source data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/New-HPE-About-2x-md.jpg/image-1x-sm 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/New-HPE-About-2x-md.jpg/image-2x-sm 2x" media="(min-width: 768px)"/>
 	    <!--[if IE 9]></video><![endif]-->
 	    <!--[if (lte IE 8)]>
 	    <img data-sly-test="false" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;New-HPE-About-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/New-HPE-About-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	     <img data-sly-test="true" class="img-responsive"
-	        src="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;New-HPE-About-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-md"
+	        src="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/New-HPE-About-2x-md.jpg"
 	        alt=""
 	        title=""
 	     >
 	    <!--<![endif]-->
 	    <!--[if (gte IE 9)|!(IE)]><!-->
-		    <img data-srcset="&#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;New-HPE-About-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-1x-xs 1x, &#x2f;content&#x2f;dam&#x2f;hpe&#x2f;homepage&#x2f;hybridRouter&#x2f;New-HPE-About-2x-md.jpg&#x2f;jcr&#x3a;content&#x2f;renditions/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    <img data-srcset="https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/New-HPE-About-2x-md.jpg/image-1x-xs 1x, https://www.hpe.com/content/dam/hpe/homepage/hybridRouter/New-HPE-About-2x-md.jpg/image-2x-xs 2x" alt="" class="img-responsive lazyload" style="margin-top: 0px; margin-bottom: 0px" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 	    <!--<![endif]-->
 	</picture>
 			        </div>
@@ -2691,7 +2592,7 @@
 			<div class="footer-social col-sm-4 hidden-xs" role="region" aria-label="Social&#x20;Media" data-locale="en-us">
 				<div class="container_text_share"><span class="text-share">SHARE</span></div>
 				<div class="addthis_sharing_toolbox"></div>
-				<!-- Home%0D%0Ahttps&#x3a;&#x2f;&#x2f;www.hpe.com&#x2f;content&#x2f;hpe&#x2f;country&#x2f;us&#x2f;en&#x2f;home.html -->
+				<!-- Home%0D%0Ahttps&#x3a;//www.hpe.com/content/hpe/country/us/en/home.html -->
 				<div class="email-icon">
 					<a class="button_email" href="mailto:?subject=Found%20this%20from%20the%20Hewlett%20Packard%20Enterprise%20website&body=Home%0D%0Ahttps://www.hpe.com/content/hpe/country/us/en/home.html">
 						<span class="icon-social-mail"/><span class="hidden">Send Email</span></span>
@@ -2850,13 +2751,6 @@
 <script src="https://www.hpe.com/etc/clientlibs/hpeweb/js/hpe-vendor-bundle.js"></script>
 <script src="https://www.hpe.com/etc/clientlibs/hpeweb/js/hpe-core-bundle.js"></script>
 <!-- END HPE JAVASCRIPT -->
-<!-- Adobe Analytics -->
-<script type="text/javascript">
-    // Adobe Analytics Implementation code
-</script>
-<script>
-    // Omniture tracking call made
-</script>
 <!-- build : build-1.0.0.394.4   -->
 </div>
 </body>
