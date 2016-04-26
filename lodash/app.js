@@ -11,8 +11,10 @@ _.forEach(h2s, function(h2){
 
 var lis = toc.getElementsByTagName('li');
 
-var filter = document.getElementById('filter');
-filter[addEvent]('keyup', function(){
+var filter = document.getElementById('sfilter');
+filter[addEvent]('keyup', doFilter);
+filter[addEvent]('change', doFilter);
+function doFilter(){
 	var val = _.trim(filter.value).toLowerCase();
 	var match;
 	_.forEach(h2s, function(h2){
@@ -38,5 +40,5 @@ filter[addEvent]('keyup', function(){
 			}
 		});
 	});
-});
+}
 filter.focus();
